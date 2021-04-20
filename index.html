@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+    <link rel="stylesheet" href="calc.css">
+</head>
+<body>
+    <form name="calc" class="calculator">
+    <div class="container">
+        
+            <div class="num" id="inp"><input type="text" name="out"></div>
+            <div class="num" id="ad" onclick="calc.out.value += '+'" >+</div>
+            <div class="num" id="sub" onclick="calc.out.value += '-'" >-</div>
+            <div class="num" id="mul" onclick="calc.out.value += '*'" >&times;</div>
+            <div class="num" id="div" onclick="calc.out.value += '/'" >&divide;</div>
+            <div class="num" id="Sev" onclick="calc.out.value += '7'" >7</div>
+            <div class="num" id="Eig" onclick="calc.out.value += '8'" >8</div>
+            <div class="num" id="nin" onclick="calc.out.value += '9'" >9</div>
+            <div class="num" id="equ" onclick="calc.out.value = eval(calc.out.value)" >=</div>
+            <div class="num" id="4" onclick="calc.out.value += '4'" >4</div>
+            <div class="num" id="5" onclick="calc.out.value += '5'" >5</div>
+            <div class="num" id="6" onclick="calc.out.value += '6'" >6</div>
+            <div class="num" id="1" onclick="calc.out.value += '1'" >1</div>
+            <div class="num" id="2" onclick="calc.out.value += '2'" >2</div>
+            <div class="num" id="3" onclick="calc.out.value += '3'" >3</div>
+            <div class="num" id="0" onclick="calc.out.value += '0'" >0</div>
+            <div class="num" id="." onclick="calc.out.value += '.'" >&#8729;</div>
+            <div class="num" id="cancl1" onclick="call()" >&Lt;</div>
+            <div class="num" id="cancl" onclick="calc.out.value = ''" >C</div>
+            
+         </div> 
+   </form>
+<script type="text/javascript" src="vanilla-tilt.js"></script>
+   <script>	
+   VanillaTilt.init(document.querySelector(".container"), {
+		max: 25,
+		speed: 400
+	});
+      function call(){
+      const v =document.calc.out.value;
+      document.calc.out.value =v.substring(0, v.length-1);
+       }
+   </script>
+
+</body>
+</html>
